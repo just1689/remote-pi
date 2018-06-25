@@ -12,6 +12,7 @@ import (
 )
 
 func StartDaemon(config model.Config) {
+
 	if config.EnableGPIO {
 		gpio.Startup()
 		gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessage)
@@ -22,6 +23,9 @@ func StartDaemon(config model.Config) {
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {
+	fmt.Println(">>> New message")
+	fmt.Println(string(message.Data))
+	fmt.Println("<<< EOM")
 
 	var pinMessage = model.PinMessage{}
 	if err := util.BytesToDecoder(message.Data).Decode(&pinMessage); err != nil {
