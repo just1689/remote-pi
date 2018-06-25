@@ -34,6 +34,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 # Disclaimer
 
+<img width="64" src="https://libcloud.apache.org/images/posts/gce/image03.png" /><br />
 <img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
 
 *** This project in no way associated with the Raspberry Pi company. ***
