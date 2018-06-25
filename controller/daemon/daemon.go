@@ -11,14 +11,14 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func StartDaemon(projectID string, topicName string, credentialsFile string) {
+func StartDaemon(config model.Config) {
 	gpio.Startup()
-	gcp.Subscribe(projectID, topicName, credentialsFile, handleMessage)
+	gcp.Subscribe(config.ProjectID, config.TopicName, config.CredentialsFile, handleMessage)
 }
 
-func StartDaemonNoPi(projectID string, topicName string, credentialsFile string) {
+func StartDaemonNoPi(config model.Config) {
 	gpio.Startup()
-	gcp.Subscribe(projectID, topicName, credentialsFile, handleMessageNoPi)
+	gcp.Subscribe(config.ProjectID, config.TopicName, config.CredentialsFile, handleMessageNoPi)
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {

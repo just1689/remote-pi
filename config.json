@@ -1,0 +1,5 @@
+{
+  "projectID": "ex-remote-pi",
+  "topicName": "toggle",
+  "credentialsFile": "credentials.json"
+}
