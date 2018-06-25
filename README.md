@@ -5,6 +5,9 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 - Configuration is handled in a config file. See config.json
 - Credentials are to be generated and made available. See config.json for credentials filename.
 
+<div name="background">
+
+
 
 # Setup
 
@@ -38,5 +41,21 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 <img width="800" src="https://libcloud.apache.org/images/posts/gce/image03.png" /><br />
 <img width="800" src="https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-2-Ports-1-1856x1080.jpg" />
+
+
+</div>
+
+<style>
+#background {
+    layer: background;
+    shape: square;
+    size: 5000;
+    color: transparent;
+    image-url: url(https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-2-Ports-1-1856x1080.jpg);
+    image-size: contain;
+    image-resolution: original;
+    label-visibility: none;
+}
+</style>
 
 *** This project in no way associated with the Raspberry Pi company. ***
