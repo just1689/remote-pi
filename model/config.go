@@ -5,4 +5,5 @@ type Config struct {
 	TopicName        string `json:"topicName" bson:"topicName"`
 	SubscriptionName string `json:"subscriptionName" bson:"subscriptionName"`
 	CredentialsFile  string `json:"credentialsFile" bson:"credentialsFile"`
+	EnableGPIO       bool   `json:"enableGPIO" bson:"enableGPIO"`
 }

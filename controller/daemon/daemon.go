@@ -12,16 +12,17 @@ import (
 )
 
 func StartDaemon(config model.Config) {
-	gpio.Startup()
-	gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessage)
-}
+	if config.EnableGPIO {
+		gpio.Startup()
+		gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessage)
+	} else {
+		gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessageNoGPIO)
+	}
 
-func StartDaemonNoPi(config model.Config) {
-	gpio.Startup()
-	gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessageNoPi)
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {
+
 	var pinMessage = model.PinMessage{}
 	if err := util.BytesToDecoder(message.Data).Decode(&pinMessage); err != nil {
 		logrus.Errorln(fmt.Sprintf("There was a problem decoding the post message: %s", err.Error()))
@@ -31,8 +32,11 @@ func handleMessage(_ context.Context, message *pubsub.Message) {
 
 }
 
-func handleMessageNoPi(_ context.Context, message *pubsub.Message) {
-	fmt.Println(string(message.Data))
+func handleMessageNoGPIO(_ context.Context, message *pubsub.Message) {
 	message.Ack()
+
+	fmt.Println(">>> New message")
+	fmt.Println(string(message.Data))
+	fmt.Println("<<< EOM")
 
 }
