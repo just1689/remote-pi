@@ -23,8 +23,8 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 # 🌈 Road map 🦄
 
 ## 🏆 Version 1
-- Externalize config into json file.
-- Better docs
+- ~~Externalize config into json file.~~
+- ~~Better docs~~
 - First Release
 
 ## 🚀 Version 2
@@ -35,6 +35,6 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 # Disclaimer
 
 <img width="800" src="https://libcloud.apache.org/images/posts/gce/image03.png" /><br />
-<img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
+<img width="64" src="https://www.raspberrypi.org/app/uploads/2017/05/Raspberry-Pi-2-Ports-1-1856x1080.jpg" />
 
 *** This project in no way associated with the Raspberry Pi company. ***
