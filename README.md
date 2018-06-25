@@ -21,4 +21,4 @@ The goal of this project is to control the IO pins of a Raspberry Pi from A Goog
 
 <img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
 
-* This project in no way associated with the Raspberry Pi company.
+*** This project in no way associated with the Raspberry Pi company. ***
