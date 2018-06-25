@@ -16,11 +16,21 @@ func StartDaemon(projectID string, topicName string, credentialsFile string) {
 	gcp.Subscribe(projectID, topicName, credentialsFile, handleMessage)
 }
 
+func StartDaemonNoPi(projectID string, topicName string, credentialsFile string) {
+	gpio.Startup()
+	gcp.Subscribe(projectID, topicName, credentialsFile, handleMessageNoPi)
+}
+
 func handleMessage(_ context.Context, message *pubsub.Message) {
 	var pinMessage = model.PinMessage{}
 	if err := util.BytesToDecoder(message.Data).Decode(&pinMessage); err != nil {
 		logrus.Errorln(fmt.Sprintf("There was a problem decoding the post message: %s", err.Error()))
 	}
 	gpio.PinToggle(pinMessage.PinID, pinMessage.On)
+
+}
+
+func handleMessageNoPi(_ context.Context, message *pubsub.Message) {
+	fmt.Println(string(message.Data))
 
 }

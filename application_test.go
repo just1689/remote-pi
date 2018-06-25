@@ -12,5 +12,5 @@ func main() {
 	topicName := "toggle"
 	credentialsFile := "credentials.json"
 
-	daemon.StartDaemon(projectID, topicName, credentialsFile)
+	daemon.StartDaemonNoPi(projectID, topicName, credentialsFile)
 }
