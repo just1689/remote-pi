@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func Subscribe(projectID string, topicName string, credentialsFile string, handleMessage func(context.Context, *pubsub.Message)) (err error) {
+func Subscribe(projectID string, topicName string, credentialsFile string, subName string, handleMessage func(context.Context, *pubsub.Message)) (err error) {
 
 	ctx := context.Background()
 
@@ -21,7 +21,7 @@ func Subscribe(projectID string, topicName string, credentialsFile string, handl
 
 	topic := client.Topic(topicName)
 
-	sub, err := client.CreateSubscription(ctx, "subName", pubsub.SubscriptionConfig{
+	sub, err := client.CreateSubscription(ctx, subName, pubsub.SubscriptionConfig{
 		Topic:       topic,
 		AckDeadline: 10 * time.Second,
 	})

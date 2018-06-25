@@ -13,12 +13,12 @@ import (
 
 func StartDaemon(config model.Config) {
 	gpio.Startup()
-	gcp.Subscribe(config.ProjectID, config.TopicName, config.CredentialsFile, handleMessage)
+	gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessage)
 }
 
 func StartDaemonNoPi(config model.Config) {
 	gpio.Startup()
-	gcp.Subscribe(config.ProjectID, config.TopicName, config.CredentialsFile, handleMessageNoPi)
+	gcp.Subscribe(config.ProjectID, config.TopicName, config.SubscriptionName, config.CredentialsFile, handleMessageNoPi)
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {
