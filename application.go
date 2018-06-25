@@ -13,6 +13,10 @@ const configFile = "config.json"
 
 func main() {
 	fmt.Println("Application starting")
+	start()
+}
+
+func start() {
 
 	bytes, err := ioutil.ReadFile(configFile)
 	if err != nil {
