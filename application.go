@@ -7,5 +7,10 @@ import (
 
 func main() {
 	fmt.Println("Application starting")
-	daemon.StartDaemon()
+
+	projectID := ""
+	topicName := ""
+	credentialsFile := ""
+
+	daemon.StartDaemon(projectID, topicName, credentialsFile)
 }

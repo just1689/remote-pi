@@ -11,11 +11,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func StartDaemon() {
+func StartDaemon(projectID string, topicName string, credentialsFile string) {
 	gpio.Startup()
-	projectID := ""
-	topicName := ""
-	credentialsFile := ""
 	gcp.Subscribe(projectID, topicName, credentialsFile, handleMessage)
 }
 
