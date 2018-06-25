@@ -20,16 +20,19 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 - Run `go run application.go`
 
 
-## 🌈 Road map 🦄
+# 🌈 Road map 🦄
 
-### 🏆 Version 1
+## 🏆 Version 1
 - Externalize config into json file.
 - Better docs
 - First Release
 
-### 🚀 Version 2
+## 🚀 Version 2
 - Subscribe to pin as input
 - AWS integration
+
+
+# Disclaimer
 
 <img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
 
