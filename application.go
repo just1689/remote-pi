@@ -8,9 +8,9 @@ import (
 func main() {
 	fmt.Println("Application starting")
 
-	projectID := ""
-	topicName := ""
-	credentialsFile := ""
+	projectID := "ex-remote-pi"
+	topicName := "projects/ex-remote-pi/topics/toggle"
+	credentialsFile := "credentials.json"
 
 	daemon.StartDaemon(projectID, topicName, credentialsFile)
 }
