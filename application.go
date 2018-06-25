@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/just1689/remote-pi/controller/daemon"
+)
 
 func main() {
-	fmt.Println("oh hi")
+	fmt.Println("Application starting")
+	daemon.StartDaemon()
 }
