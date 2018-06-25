@@ -27,10 +27,12 @@ func handleMessage(_ context.Context, message *pubsub.Message) {
 		logrus.Errorln(fmt.Sprintf("There was a problem decoding the post message: %s", err.Error()))
 	}
 	gpio.PinToggle(pinMessage.PinID, pinMessage.On)
+	message.Ack()
 
 }
 
 func handleMessageNoPi(_ context.Context, message *pubsub.Message) {
 	fmt.Println(string(message.Data))
+	message.Ack()
 
 }
