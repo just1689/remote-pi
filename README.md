@@ -9,7 +9,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from A Goog
 ## Setup account in GCP
 - Create a project in GPC
 - Enable the PubSub API
-- Create a user with access to READ on PubSub in GCP. Download the credentials.json file.
+- Create a user with access to SUBSCRIBE on PubSub in GCP. Download the credentials.json file.
 
 ## Setup project locally
 
