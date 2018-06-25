@@ -1,9 +1,8 @@
 Remote Pi
 ===========
 
-The goal of this project is to control a Raspberry Pis IO pins from A Google Cloud Platform PubSub queue.
+The goal of this project is to control the IO pins of a Raspberry Pi from A Google Cloud Platform PubSub queue.
 
-<img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
 
 # Setup
 
@@ -18,3 +17,8 @@ The goal of this project is to control a Raspberry Pis IO pins from A Google Clo
 - Run `dep ensure --v`
 - Replace `projectID`, `topicID` & `credentialsFile` variables
 - Run `go run application.go`
+
+
+<img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
+
+* This project in no way associated with the Raspberry Pi company.
