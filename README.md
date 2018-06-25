@@ -6,9 +6,6 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 - Credentials are to be generated and made available. See config.json for credentials filename.
 
 
-
-
-
 # Setup
 
 ## Setup account in GCP
@@ -26,17 +23,13 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 ## Pi Setup
 
-Use BCM as the PinIDs in the message. The message must conform to type model/Config
-For more info on pins: see https://pinout.xyz/
+- The message must conform to type model/Config.
+- Use BCM codes as the PinIDs in the message.
+- For more info on pins: see https://pinout.xyz/
 
 
 
 # 🌈 Road map 🦄
-
-## 🏆 Version 1
-- ~~Externalize config into json file.~~
-- ~~Better docs~~
-- First Release
 
 ## 🚀 Version 2
 - Subscribe to pin as input
