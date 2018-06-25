@@ -28,5 +28,5 @@ func start() {
 		log.Fatal("Failed to load config.json: ", err.Error())
 	}
 
-	daemon.StartDaemon(config)
+	daemon.StartDaemonNoPi(config)
 }

@@ -1,6 +1,6 @@
 {
   "projectID": "ex-remote-pi",
   "topicName": "toggle",
-  "subscriptionName": "subName"
+  "subscriptionName": "subName",
   "credentialsFile": "credentials.json"
 }
