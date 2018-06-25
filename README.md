@@ -1,4 +1,4 @@
-Remote Pi
+🛸 Remote Pi 🥧
 ===========
 
 The goal of this project is to control the IO pins of a Raspberry Pi from A Google Cloud Platform PubSub queue.
