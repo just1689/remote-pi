@@ -24,6 +24,12 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 - Replace `projectID`, `topicID` & `credentialsFile` variables
 - Run `go run application.go`
 
+## Pi Setup
+
+Use BCM as the PinIDs in the message. The message must conform to type model/Config
+For more info on pins: see https://pinout.xyz/
+
+
 
 # 🌈 Road map 🦄
 
