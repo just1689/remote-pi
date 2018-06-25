@@ -3,7 +3,7 @@ Remote Pi
 
 The goal of this project is to control a Raspberry Pis IO pins from A Google Cloud Platform PubSub queue.
 
-<img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
+<img width="64" src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" />
 
 # Setup
 
