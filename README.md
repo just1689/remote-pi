@@ -39,6 +39,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 # Disclaimer
 
+*** This project in no way associated with the Raspberry Pi company. ***
 
 <img width="800" src="https://libcloud.apache.org/images/posts/gce/image03.png" style="float: left; margin-right: 10px;" />
 <br />
@@ -49,4 +50,3 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 
 
-*** This project in no way associated with the Raspberry Pi company. ***
