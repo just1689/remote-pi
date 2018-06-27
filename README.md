@@ -1,6 +1,5 @@
 
 [![travis](https://travis-ci.org/just1689/remote-pi.svg?branch=master)](https://travis-ci.org/just1689/remote-pi)
-[![codecov](https://codecov.io/gh/just1689/remote-pi/branch/master/graph/badge.svg)](https://codecov.io/gh/just1689/remote-pi)
 [![Go Report Card](https://goreportcard.com/badge/github.com/just1689/remote-pi)](https://goreportcard.com/report/github.com/just1689/remote-pi)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6337f6fcf9837f809721/maintainability)](https://codeclimate.com/github/just1689/remote-pi/maintainability)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat)](http://badges.mit-license.org)
