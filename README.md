@@ -40,8 +40,15 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 # 🌈 Road map 🦄
 
 ## 🚀 Version 2
-- Subscribe to pin as input
-- AWS integration
+- Subscribe to pin as input as some interval
+- Interrogate pin for ON or OFF
+
+## 🚀 Version 3
+- AWS integration as an alternative
+
+## 🚀 Version 4
+- Use both clouds together for redundant message delivery.
+
 
 
 # Disclaimer
