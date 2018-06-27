@@ -37,8 +37,8 @@ func handleMessage(_ context.Context, message *pubsub.Message) {
 }
 
 func handleMessageNoGPIO(_ context.Context, message *pubsub.Message) {
-	message.Ack()
 	logMsg(string(message.Data))
+	message.Ack()
 
 }
 
