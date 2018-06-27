@@ -39,15 +39,18 @@ The goal of this project is to control the IO pins of a Raspberry Pi from a GCP 
 
 # 🌈 Road map 🦄
 
-## 🚀 Version 2
+## 🚀 Version 2 - Let's get some input
 - Subscribe to pin as input as some interval
 - Interrogate pin for ON or OFF
 
-## 🚀 Version 3
-- AWS integration as an alternative
+## 🚀 Version 3 - Multi-cloud
+- AWS integration as an alternative.
 
-## 🚀 Version 4
+## 🚀 Version 4 - Redundancy and Auditability
 - Use both clouds together for redundant message delivery.
+- Keep history of events / other details for a particular length of time.
+- Garbage collection of events
+- Interrogate history remotely
 
 
 
