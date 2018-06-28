@@ -13,7 +13,7 @@ func SubscribePubSub(config model.AppConfig, handleMessage func(context.Context,
 
 	ctx := context.Background()
 
-	client, err := pubsub.NewClient(ctx, config.ProjectID, option.WithCredentialsFile(config.CredentialsFile))
+	client, err := pubsub.NewClient(ctx, config.ProjectID, option.WithCredentialsFile(config.OutputSubscription.CredentialsFile))
 	if err != nil {
 		log.Println("Failed to create pub sub client", err.Error())
 		return
