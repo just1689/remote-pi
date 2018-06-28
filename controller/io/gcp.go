@@ -18,7 +18,7 @@ func SubscribePubSub(config model.AppConfig, handleMessage func(context.Context,
 		log.Println("Failed to create pub sub client", err.Error())
 		return
 	}
-	sub := client.Subscription(config.SubscriptionName)
+	sub := client.Subscription(config.OutputSubscription.SubscriptionName)
 	sub.Receive(ctx, handleMessage)
 
 	return
