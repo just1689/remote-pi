@@ -4,7 +4,8 @@ type AppConfig struct {
 	ProjectID          string              `json:"projectId" bson:"projectId"`
 	CredentialsFile    string              `json:"credentialsFile" bson:"credentialsFile"`
 	EnableGPIO         bool                `json:"enableGPIO" bson:"enableGPIO"`
-	InputSubscriptions []InputSubscription `json:"inputSubscription" bson:"inputSubscription"`
+	OutputSubscription OutputSubscription  `json:"outputSubscription" bson:"outputSubscription"`
+	InputSubscriptions []InputSubscription `json:"inputSubscriptions" bson:"inputSubscriptions"`
 }
 
 /*
