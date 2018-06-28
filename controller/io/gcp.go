@@ -1,8 +1,6 @@
 package io
 
 import (
-	"log"
-
 	"cloud.google.com/go/pubsub"
 	"encoding/json"
 	"fmt"
@@ -18,7 +16,7 @@ func SubscribePubSub(config model.AppConfig, handleMessage func(context.Context,
 
 	client, err := pubsub.NewClient(ctx, config.ProjectID, option.WithCredentialsFile(config.OutputSubscription.CredentialsFile))
 	if err != nil {
-		log.Println("Failed to create pub sub client", err.Error())
+		logrus.Errorln(fmt.Sprintf("Failed to create pubsub client: %e", err))
 		return
 	}
 	sub := client.Subscription(config.OutputSubscription.SubscriptionName)
@@ -33,7 +31,7 @@ func GetPubTopic(config model.AppConfig, c model.InputSubscription) (topic *pubs
 	ctx := context.Background()
 	client, err := pubsub.NewClient(ctx, config.ProjectID, option.WithCredentialsFile(config.OutputSubscription.CredentialsFile))
 	if err != nil {
-		logrus.Errorln(fmt.Sprintf("Failed to create pub sub client", err.Error()))
+		logrus.Errorln(fmt.Sprintf("Failed to create pub sub client: %e", err))
 		return
 	}
 	topic = client.Topic(c.Topic)
@@ -45,7 +43,7 @@ func PubToTopic(topic *pubsub.Topic, i interface{}) (err error) {
 	ctx := context.Background()
 	b, err := json.Marshal(i)
 	if err != nil {
-		logrus.Errorln(fmt.Sprintf("Failed to marshal i: %s", err))
+		logrus.Errorln(fmt.Sprintf("Failed to marshal i: %e", err))
 		return
 	}
 	_, err = topic.Publish(ctx, &pubsub.Message{Data: b}).Get(ctx)
