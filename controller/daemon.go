@@ -52,7 +52,7 @@ func monitorPin(config model.AppConfig, c model.InputSubscription) {
 	if err != nil {
 		logrus.Fatalln(fmt.Sprintf("Could not subscribe to topic %s. Got error: %s", c.Topic, err.Error()))
 	}
-	sleepDur := time.Duration(c.IntervalMs) * time.Millisecond //Suspicious.. TODO: actually check this
+	sleepDur := time.Duration(c.IntervalMs) * time.Millisecond
 	for {
 		if !config.EnableGPIO {
 			time.Sleep(sleepDur)
