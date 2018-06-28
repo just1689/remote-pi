@@ -6,7 +6,7 @@ import (
 	"github.com/just1689/remote-pi/controller/io"
 )
 
-const configFile = "config.json"
+const configFile = "app-config.json"
 
 func main() {
 	fmt.Println("Application starting")

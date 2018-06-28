@@ -9,7 +9,7 @@ import (
 	"google.golang.org/api/option"
 )
 
-func SubscribePubSub(config model.Config, handleMessage func(context.Context, *pubsub.Message)) (err error) {
+func SubscribePubSub(config model.AppConfig, handleMessage func(context.Context, *pubsub.Message)) (err error) {
 
 	ctx := context.Background()
 

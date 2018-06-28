@@ -10,7 +10,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func StartDaemon(config model.Config) {
+func StartDaemon(config model.AppConfig) {
 
 	if config.EnableGPIO {
 		err := io.Startup()
