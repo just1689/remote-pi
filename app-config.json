@@ -1,6 +1,6 @@
 {
   "projectID": "ex-remote-pi",
-  "enableGPIO": true,
+  "enableGPIO": false,
   "outputSubscription": {
     "credentialsFile": "credentials.json",
     "subscriptionName": "subName"
