@@ -54,6 +54,12 @@ func monitorPin(config model.AppConfig, c model.InputSubscription) {
 	}
 	sleepDur := time.Duration(c.IntervalMs) * time.Millisecond //Suspicious.. TODO: actually check this
 	for {
+		if !config.EnableGPIO {
+			time.Sleep(sleepDur)
+			logrus.Println(fmt.Sprintf("Would have read pin %v, but config told me not to", c.PinID))
+			time.Sleep(sleepDur)
+			continue
+		}
 		io.PubToTopic(
 			topic,
 			model.PinMessage{
