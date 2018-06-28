@@ -41,13 +41,17 @@ The goal of this project is to control the IO pins of a Raspberry Pi from the cl
 # 🌈 Road map 🦄
 
 ## 🚀 Version 2 - Let's get some input
-- Subscribe to pin as input as some interval
+- Subscribe to pin as input as some interval (PubSub)
 - Interrogate pin for ON or OFF
 
-## 🚀 Version 3 - Multi-cloud
+## 🚀 Version 3 - Multi-cloud & Real-time output
 - AWS integration as an alternative.
+- Websocket host and reverse connection for real-time output pin control.
 
-## 🚀 Version 4 - Redundancy and Auditability
+## 🚀 Version 4 - Real-time Input
+- Subscribe to an input pin in with feedback at a paricular interval in real time.
+
+## 🚀 Version 5 - Redundancy and Auditability
 - Use both clouds together for redundant message delivery.
 - Keep history of events / other details for a particular length of time.
 - Garbage collection of events
