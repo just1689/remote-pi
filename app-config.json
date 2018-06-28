@@ -6,7 +6,7 @@
     "credentialsFile": "credentials.json",
     "subscriptionName": "subName"
   },
-  "inputSubscription": [
+  "inputSubscriptions": [
     {
       "pinId": 4,
       "credentialsFile": "credentials.json",
