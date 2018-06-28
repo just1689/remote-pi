@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/just1689/remote-pi/controller/daemon"
+	"github.com/just1689/remote-pi/controller"
 	"github.com/just1689/remote-pi/controller/io"
 )
 
@@ -17,5 +17,5 @@ func start() {
 
 	config := io.ReadConfig(configFile)
 	fmt.Println("..config was loaded from file")
-	daemon.StartDaemon(config)
+	controller.StartDaemon(config)
 }

@@ -1,4 +1,4 @@
-package daemon
+package controller
 
 import (
 	"cloud.google.com/go/pubsub"
@@ -17,15 +17,15 @@ func StartDaemon(config model.Config) {
 		if err != nil {
 			logrus.Fatalln(fmt.Sprintf("Could not start the GPIO library: %s", err.Error()))
 		}
-		io.Subscribe(config, handleMessage)
+		io.SubscribePubSub(config, handleMessage)
 	} else {
-		io.Subscribe(config, handleMessageNoGPIO)
+		io.SubscribePubSub(config, handleMessageNoGPIO)
 	}
 
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {
-	logMsg(string(message.Data))
+	util.LogMsg(string(message.Data))
 
 	var pinMessage = model.PinMessage{}
 	if err := util.BytesToDecoder(message.Data).Decode(&pinMessage); err != nil {
@@ -37,13 +37,7 @@ func handleMessage(_ context.Context, message *pubsub.Message) {
 }
 
 func handleMessageNoGPIO(_ context.Context, message *pubsub.Message) {
-	logMsg(string(message.Data))
+	util.LogMsg(string(message.Data))
 	message.Ack()
-
-}
-
-func logMsg(m string) {
-	logrus.Info(">>> New message:")
-	logrus.Info(m)
 
 }
