@@ -4,12 +4,12 @@ import (
 	"log"
 
 	"cloud.google.com/go/pubsub"
+	"encoding/json"
+	"fmt"
 	"github.com/just1689/remote-pi/model"
+	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"google.golang.org/api/option"
-	"encoding/json"
-	"github.com/sirupsen/logrus"
-	"fmt"
 )
 
 func SubscribePubSub(config model.AppConfig, handleMessage func(context.Context, *pubsub.Message)) (err error) {
