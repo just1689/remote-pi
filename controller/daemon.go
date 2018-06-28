@@ -20,14 +20,14 @@ func StartDaemon(config model.AppConfig) {
 		}
 	}
 
+	if len(config.InputSubscriptions) > 0 {
+		logrus.Println("> Starting writers: %i", len(config.InputSubscriptions))
+		go startWriter(config)
+	}
+
 	if config.OutputSubscription.On {
 		logrus.Println("> Starting reader")
 		startReader(config)
-	}
-
-	if len(config.InputSubscriptions) > 0 {
-		logrus.Println("> Starting writer")
-		startWriter(config)
 	}
 
 }
