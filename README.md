@@ -43,7 +43,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from the cl
 
 # 🌈 Road map 🦄
 
-## 🚀 Version 2 - Let's get some input
+## 🚀 Version 2 - Let's get some input (CURRENTLY IN TESTING)
 - Subscribe to pin as input as some interval (PubSub)
 - Interrogate pin for ON or OFF
 
