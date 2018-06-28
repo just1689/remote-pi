@@ -9,7 +9,7 @@ import (
 const configFile = "app-config.json"
 
 func main() {
-	fmt.Println("Application starting")
+	fmt.Println("Application starting v1.0")
 	start()
 }
 
