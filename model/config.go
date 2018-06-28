@@ -19,12 +19,11 @@ type OutputSubscription struct {
 
 /*
 	InputSubscription is used to describe a subscription for a particular pin.
-	This pin will be read every IntervalMs and written to queue TopicName
-	on a subscription called SubscriptionName.
+	This pin will be read every IntervalMs and written to queue subscriptionName.
  */
 type InputSubscription struct {
 	PinID            int    `json:"pinId" bson:"pinId"`
-	TopicName        string `json:"topicName" bson:"topicName"`
+	CredentialsFile  string `json:"credentialsFile" bson:"credentialsFile"`
 	SubscriptionName string `json:"subscriptionName" bson:"subscriptionName"`
-	IntervalMs       string `json:"intervalMs" bson:"intervalMs"`
+	IntervalMs       int32    `json:"intervalMs" bson:"intervalMs"`
 }

@@ -1,7 +1,14 @@
 {
   "projectID": "ex-remote-pi",
-  "topicName": "toggle",
-  "subscriptionName": "subName",
-  "credentialsFile": "credentials.json",
-  "enableGPIO": false
+  "enableGPIO": true,
+  "outputSubscription": {
+    "credentialsFile": "credentials.json",
+    "subscriptionName": "subName"
+  },
+  "inputSubscription": {
+    "pinId": 4,
+    "credentialsFile": "credentials.json",
+    "subscriptionName": "subName",
+    "intervalMs": 250
+  }
 }
