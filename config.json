@@ -1,7 +1,0 @@
-{
-  "projectID": "ex-remote-pi",
-  "topicName": "toggle",
-  "subscriptionName": "subName",
-  "credentialsFile": "credentials.json",
-  "enableGPIO": false
-}

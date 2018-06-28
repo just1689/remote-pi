@@ -21,7 +21,10 @@ The goal of this project is to control the IO pins of a Raspberry Pi from the cl
 
 - Create a project in GPC.
 - Enable the PubSub API.
-- Create a user with SUBSCRIBE on PubSub. Download the `credentials.json` file.
+- Create a Topic.
+- Create a subscription.
+- Create a user with SUBSCRIBE on GCP PubSub. Download the `credentials.json` file.
+- Edit the app-config.json with details for your PubSub config.
 
 ## Setup project locally
 
@@ -32,7 +35,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from the cl
 
 ## Pi Setup
 
-- The message must conform to type model/Config.
+- The message must conform to type model/PinMessage.
 - Use BCM codes as the PinIDs in the message.
 - For more info on pins: see https://pinout.xyz/
 

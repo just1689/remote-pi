@@ -7,14 +7,14 @@ import (
 	"log"
 )
 
-func ReadConfig(f string) (config model.Config) {
+func ReadConfig(f string) (config model.AppConfig) {
 	bytes, err := ioutil.ReadFile(f)
 	if err != nil {
-		log.Fatal("Failed to read file config.json: ", err.Error())
+		log.Fatal("Failed to read file app-config.json: ", err.Error())
 	}
 
 	if err := util.BytesToDecoder(bytes).Decode(&config); err != nil {
-		log.Fatal("Failed to load config.json: ", err.Error())
+		log.Fatal("Failed to load app-config.json: ", err.Error())
 	}
 	return
 }

@@ -1,0 +1,17 @@
+{
+  "projectID": "ex-remote-pi",
+  "enableGPIO": false,
+  "outputSubscription": {
+    "on": true,
+    "credentialsFile": "credentials.json",
+    "subscriptionName": "subName"
+  },
+  "inputSubscriptions": [
+    {
+      "pinId": 4,
+      "credentialsFile": "credentials.json",
+      "topic": "pin-values",
+      "intervalMs": 1000
+    }
+  ]
+}
