@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/stianeikeland/go-rpio"
 	"time"
+	"github.com/sirupsen/logrus"
 )
 
 func Startup() error {
@@ -11,7 +12,7 @@ func Startup() error {
 }
 
 func PinToggle(pinID int, on bool) {
-	fmt.Println(fmt.Sprintf("===> Switching pin %v to %v", pinID, on))
+	logrus.Println(fmt.Sprintf("===> Switching pin %v to %v", pinID, on))
 	pin := rpio.Pin(pinID)
 	pin.Output()
 	if on {
@@ -21,11 +22,13 @@ func PinToggle(pinID int, on bool) {
 	}
 }
 
-func PinRead(pinID int) bool {
+func PinRead(pinID int) (on bool) {
 	pin := rpio.Pin(pinID)
 	pin.Input()
 	res := pin.Read()
-	return res == rpio.High
+	on = res == rpio.High
+	logrus.Println(fmt.Sprintf("===> Reading pin %v found it to be: %t", pinID, on))
+	return
 }
 
 func PinTimeUntilOn(pinID int, timeout time.Duration) (c chan int64) {
