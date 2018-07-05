@@ -71,7 +71,8 @@ func monitorPin(config model.AppConfig, c model.InputSubscription) {
 }
 
 func handleMessage(_ context.Context, message *pubsub.Message) {
-	util.LogMsg(string(message.Data))
+	logrus.Info(">>> New message:")
+	logrus.Info(string(message.Data))
 
 	var pinMessage = model.PinMessage{}
 	if err := util.BytesToDecoder(message.Data).Decode(&pinMessage); err != nil {
@@ -83,7 +84,8 @@ func handleMessage(_ context.Context, message *pubsub.Message) {
 }
 
 func handleMessageNoGPIO(_ context.Context, message *pubsub.Message) {
-	util.LogMsg(string(message.Data))
+	logrus.Info(">>> New message:")
+	logrus.Info(string(message.Data))
 	message.Ack()
 
 }
