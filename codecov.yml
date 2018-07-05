@@ -1,0 +1,3 @@
+ignore:
+  - "model/**"          # nothing to see here ;)
+  - "application.go"    # nothing to see here ;)
