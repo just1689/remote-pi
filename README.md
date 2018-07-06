@@ -43,7 +43,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from cloud 
 
 # 🌈 Road map 🦄
 
-## Currently Stable & Supported
+## 🏆 Currently Stable & Supported
 - Set output pin n to on or off over GCP PubSub queue.
 
 ## 🚀 Version 2 - Let's get some input (CURRENTLY IN TESTING)
