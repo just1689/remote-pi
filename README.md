@@ -52,7 +52,7 @@ The goal of this project is to control the IO pins of a Raspberry Pi from cloud 
 
 ## 🚀 Version 3 - Multi-cloud & Real-time output
 - AWS integration as an alternative.
-- Websocket host and reverse connection for real-time output pin control.
+- WebSocket host and reverse connection for real-time output pin control.
 
 ## 🚀 Version 4 - Real-time Input
 - Subscribe to an input pin in with feedback at a paricular interval in real time.
