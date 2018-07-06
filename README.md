@@ -9,7 +9,7 @@
 🛸 Remote Pi 🥧
 ===========
 
-The goal of this project is to control the IO pins of a Raspberry Pi from the cloud.
+The goal of this project is to control the IO pins of a Raspberry Pi from cloud queues, rest endpoints or over websockets.
 - For now, only Google Cloud Platform is supported.
 - Configuration is handled in a config file. See config.json
 - Credentials are to be generated and made available. See config.json for credentials filename.
@@ -42,6 +42,9 @@ The goal of this project is to control the IO pins of a Raspberry Pi from the cl
 
 
 # 🌈 Road map 🦄
+
+## 🏆 Currently Stable & Supported
+- Set output pin n to on or off over GCP PubSub queue.
 
 ## 🚀 Version 2 - Let's get some input (CURRENTLY IN TESTING)
 - Subscribe to pin as input as some interval (PubSub)
